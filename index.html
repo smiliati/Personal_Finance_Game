@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Finance Decision Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <header class="header">
+      <h1>Personal Finance Decision Game</h1>
+      <p class="subtitle">Make choices. Manage your money. Survive adulthood.</p>
+    </header>
+
+    <section class="stats-panel">
+      <div class="stat-card">
+        <span class="stat-label">Cash</span>
+        <span class="stat-value" id="cash">$0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Savings</span>
+        <span class="stat-value" id="savings">$0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Debt</span>
+        <span class="stat-value" id="debt">$0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Credit Score</span>
+        <span class="stat-value" id="creditScore">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Stress</span>
+        <span class="stat-value" id="stress">0</span>
+      </div>
+    </section>
+
+    <section class="progress-section">
+      <div class="progress-text">
+        Scenario <span id="currentQuestion">1</span> of <span id="totalQuestions">1</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </section>
+
+    <main class="game-card" id="gameCard">
+      <h2 id="scenarioTitle">Welcome!</h2>
+      <p id="scenarioText">
+        Click Start Game to begin your financial journey.
+      </p>
+
+      <div id="feedbackBox" class="feedback-box hidden"></div>
+
+      <div class="choices-container" id="choicesContainer">
+        <!-- Buttons get added by JavaScript -->
+      </div>
+
+      <div class="action-row">
+        <button id="startButton" class="primary-btn">Start Game</button>
+        <button id="nextButton" class="secondary-btn hidden">Next Scenario</button>
+        <button id="restartButton" class="secondary-btn hidden">Play Again</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
