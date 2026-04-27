@@ -7,7 +7,7 @@ const startingStats = {
   savings: 500,
   debt: 1000,
   creditScore: 650,
-  stress: 30
+  stress: 0
 };
 
 // ===============================
