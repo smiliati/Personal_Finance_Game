@@ -492,7 +492,10 @@ function applyEffects(effects) {
   playerStats.stress += effects.stress || 0;
 
   // Keep values in reasonable ranges
-  if (playerStats.cash < 0) playerStats.cash = 0;
+  if (playerStats.cash < 0) {
+  playerStats.debt += Math.abs(playerStats.cash);
+  playerStats.cash = 0;
+  }
   if (playerStats.savings < 0) playerStats.savings = 0;
   if (playerStats.debt < 0) playerStats.debt = 0;
   if (playerStats.creditScore < 300) playerStats.creditScore = 300;
